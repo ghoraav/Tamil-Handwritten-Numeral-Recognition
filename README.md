@@ -120,24 +120,6 @@ Rather than a standard fully-connected softmax head, the classifier uses **learn
 
 ---
 
-## Project Structure
-
-```
-DSHTT-Tamil-Numeral-Recognition/
-│
-├── Dataset/                         # 11 class folders (0–10), 50 images each
-│
-├── DSHTT_Tamil_Numeral_Recognition.ipynb   # Main DSHTT model: full pipeline
-│
-├── CNNtrain.py                      # Baseline 1: Custom 3-layer CNN (TensorFlow)
-├── EfficientNET.py                  # Baseline 2: EfficientNet-B0 fine-tuning (TensorFlow)
-│
-├── dshtt_best.pt                    # Best saved model weights (PyTorch)
-│
-└── README.md
-```
-
----
 
 ## Setup & Usage
 
@@ -170,14 +152,6 @@ Both expect a `Dataset/` folder in the working directory with the class subfolde
 
 ---
 
-## Limitations & Future Work
-
-- **Dataset size:** 550 images is very small. Collecting more samples (target: 500+ per class) would significantly improve DSHTT's potential.
-- **SDGU gate imbalance:** During training, `α` (CNN) consistently dominated (~0.99) over `β` (Transformer). This suggests the tiny Transformer branch needs architectural tuning or dedicated pre-training.
-- **Augmentation:** Currently limited to rotation and translation. More aggressive augmentation (elastic distortion, stroke-level noise) could help given the small dataset.
-- **Gradio Demo:** A live inference UI using Gradio is planned.
-
----
 
 ## Tech Stack
 
