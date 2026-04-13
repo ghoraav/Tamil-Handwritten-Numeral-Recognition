@@ -84,7 +84,7 @@ Trained in two phases on a **GTX 1050 Ti** (CUDA 11.8):
 | Phase | Epochs | Duration | Best Val Acc | Test Acc |
 |-------|--------|----------|--------------|----------|
 | Phase 1 | 300 | ~20 min | 27.78% | 22.89% |
-| Phase 2 (resumed) | 300 | ~20 min | — | **74.70%** |
+| Phase 2 (resumed) | 300 | ~20 min | 86.92% | 83.4% |
 
 **Final Test Accuracy: 74.70%** (83 test samples)
 
